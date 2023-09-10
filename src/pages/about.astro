@@ -1,0 +1,49 @@
+---
+const pageTitle = "私について";
+
+const identity = {
+  name: "tenimhi",
+  country: "japan",
+  hobbies: ["pc games", "airsoft", "newwaves"],
+};
+
+const skills = ["JavaScript", "Node.js", "AWS"];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a href="/">ホーム</a>
+    <a href="/about/">概要</a>
+
+    <h1>{pageTitle}</h1>
+    <h2>... そして私のastro tutorial blogについて</h2>
+    <p>
+      今までnext.jsで書いていたmy
+      blogをastroで書き直すために、まずはチュートリアルでastroを学びます
+    </p>
+
+    <p>情報</p>
+    <ul>
+      <li>私の名前は{identity.name}です</li>
+      <li>{identity.country}に住んでいます。</li>
+      {
+        identity.hobbies.length > 0 && (
+          <li>
+            私の趣味は
+            {identity.hobbies.map((hobby) => (
+              <span>{hobby}/</span>
+            ))}
+            です。
+          </li>
+        )
+      }
+    </ul>
+  </body>
+</html>
