@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "私について";
 
@@ -33,8 +35,7 @@ const skillColor = "navy";
     </style>
   </head>
   <body>
-    <a href="/">ホーム</a>
-    <a href="/about/">概要</a>
+    <Navigation />
 
     <h1>{pageTitle}</h1>
     <h2>... そして私のastro tutorial blogについて</h2>
@@ -64,5 +65,7 @@ const skillColor = "navy";
     <ul>
       {skills.map((s) => <li class="skill">{s}</li>)}
     </ul>
+
+    <Footer />
   </body>
 </html>

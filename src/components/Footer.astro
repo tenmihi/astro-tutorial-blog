@@ -1,0 +1,32 @@
+---
+import Social from "./social.astro";
+
+const socialConfigs = [
+  {
+    platformName: "steam",
+    platform: "steamcommunity.com/id",
+    username: "tenmihi",
+  },
+  { platform: "twitter", username: "tenmihi" },
+];
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  {
+    socialConfigs.map((s) => (
+      <Social
+        platform={s.platform}
+        username={s.username}
+        platformName={s.platformName}
+      />
+    ))
+  }
+</footer>
