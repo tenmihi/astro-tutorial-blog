@@ -11,17 +11,35 @@ const { frontmatter } = Astro.props;
     <h1>{frontmatter.title}</h1>
     <p>投稿日: {frontmatter.pubDate.slice(0, 10)}</p>
     <p>著者: {frontmatter.author}</p>
-    <ul>
+    <div class="tags">
       {
-        frontmatter.tags.map((tag) => {
-          return (
-            <li>
-              <span>{tag}</span>
-            </li>
-          );
-        })
+        frontmatter.tags.map((tag) => (
+          <p class="tag">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
       }
-    </ul>
+    </div>
     <slot />
   </body>
 </html>
+
+<style>
+  a {
+    color: #00539f;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    background-color: #f8fcfd;
+  }
+</style>
