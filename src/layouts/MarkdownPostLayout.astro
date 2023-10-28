@@ -1,0 +1,27 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>{frontmatter.title}</h1>
+    <p>投稿日: {frontmatter.pubDate.slice(0, 10)}</p>
+    <p>著者: {frontmatter.author}</p>
+    <ul>
+      {
+        frontmatter.tags.map((tag) => {
+          return (
+            <li>
+              <span>{tag}</span>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <slot />
+  </body>
+</html>

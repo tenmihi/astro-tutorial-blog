@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MdLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "My first post"
 pubDate: 2023-09-10
 description: "My first post"
@@ -11,8 +11,6 @@ tags: ["astro", "blog", "study"]
 ---
 
 # 私の最初のブログ記事
-
-投稿日: 2023-09-10
 
 Astroチュートリアルに沿って開発中です。
 

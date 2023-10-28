@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MdLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "hoge"
 pubDate: 2023-09-10
 description: "hoge"
@@ -11,7 +11,5 @@ tags: ["astro", "blog", "study"]
 ---
 
 # 私の最初のブログ記事
-
-投稿日: 2023-09-10
 
 ほげ
